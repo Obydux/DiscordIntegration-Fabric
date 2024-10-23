@@ -1,6 +1,6 @@
 plugins {
     id "com.matthewprenger.cursegradle" version "1.4.0"
-    id 'fabric-loom' version '1.6+'
+    id 'fabric-loom' version '1.8-SNAPSHOT'
     id "com.modrinth.minotaur" version "2.+"
 }
 
@@ -42,15 +42,15 @@ dependencies {
     // Fabric API. This is technically optional, but you probably want it anyway.
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
-    modImplementation include("eu.pb4:placeholder-api:2.4.0-pre.2+1.21")
-    modCompileOnly "maven.modrinth:styled-chat:2.6.0+1.21"
+    modImplementation include("eu.pb4:placeholder-api:2.5.0+1.21.2")
+    modCompileOnly "maven.modrinth:styled-chat:2.7.0+1.21.2"
 
     // =========  Common  =====================
-    modImplementation include('de.erdbeerbaerlp:dcintegration.common:3.0.7') {
+    modImplementation include('de.erdbeerbaerlp:dcintegration.common:3.1.0-SNAPSHOT') {
         changing = true
         transitive = false
     }
-    include(modImplementation('me.lucko:fabric-permissions-api:0.2-SNAPSHOT'))
+    include(modImplementation('me.lucko:fabric-permissions-api:0.3.3-SNAPSHOT'))
 
 }
 
@@ -64,7 +64,7 @@ processResources {
     }
 }
 
-def targetJavaVersion = 17
+def targetJavaVersion = 21
 tasks.withType(JavaCompile).configureEach {
     // ensure that the encoding is set to UTF-8, no matter what the system default is
     // this fixes some edge cases with special characters not displaying correctly

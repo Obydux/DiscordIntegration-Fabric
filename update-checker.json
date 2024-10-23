@@ -1,5 +1,9 @@
 [
   {
+    "version": "3.0.8",
+    "changelog": "Update to 1.21.2",
+    "type": "release"
+  },{
     "version": "3.0.7.2",
     "changelog": "Fix mixin",
     "type": "release"

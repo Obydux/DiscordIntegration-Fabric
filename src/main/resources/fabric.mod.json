@@ -17,8 +17,8 @@
     "dcintegration-fabric.mixins.json"
   ],
   "depends": {
-    "fabricloader": ">=0.15.2",
+    "fabricloader": ">=0.16",
     "fabric": "*",
-    "minecraft": "~1.21"
+    "minecraft": ">=1.21.2"
   }
 }
